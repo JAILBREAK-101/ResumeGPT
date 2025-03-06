@@ -1,3 +1,4 @@
+import './config/env'; 
 import express from 'express';
 import cors from 'cors';
 import { resumeRouter } from './routes/resume';

@@ -84,11 +84,13 @@ export class ResumeParser {
 
   private mergeResults(results: Partial<Resume>[]): Resume {
     return {
+      id: '', // Add a default or generate an ID
       name: results[0].name || '',
       email: results[0].email || '',
       phone: results[0].phone || '',
-      skills: [...new Set(results.flatMap(r => r.skills || []))],
-      experience: results.flatMap(r => r.experience || [])
+      skills: Array.from(new Set(results.flatMap(r => r.skills || []))),
+      experience: results.flatMap(r => r.experience || []),
+      education: [] // Add default empty array for education
     };
   }
 

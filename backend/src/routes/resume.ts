@@ -1,4 +1,4 @@
-import { Router } from 'express';
+import { Router, Request, Response } from 'express';
 import multer from 'multer';
 import { ResumeParser } from '../services/resumeParser';
 
@@ -20,19 +20,22 @@ const upload = multer({
 const router = Router();
 const parser = new ResumeParser();
 
-router.post('/parse', upload.single('resume'), async (req, res) => {
+router.post('/parse', upload.single('resume'), async (req: Request, res: Response): Promise<void> => {
   try {
     if (!req.file) {
-      return res.status(400).json({ error: 'No file uploaded' });
+      res.status(400).json({ error: 'No file uploaded' });
+      return;
     }
 
     const parsedResume = await parser.parse(req.file.path, req.file.mimetype);
     res.json({ resume: parsedResume });
+    return;
 
   } catch (error) {
     res.status(500).json({ 
       error: error instanceof Error ? error.message : 'Failed to parse resume' 
     });
+    return;
   }
 });
 
