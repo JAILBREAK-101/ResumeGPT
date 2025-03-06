@@ -16,7 +16,7 @@
   - HTML (Web-ready format)
 - ✅ Download parsed data as JSON
 - ✅ Simple UI for uploading & viewing results
-- ✅ Deployable on Vercel (Frontend) & Render/Fly.io (Backend)
+<!-- - ✅ Deployable on Vercel (Frontend) & Render/Fly.io (Backend)  -->
 
 ## 🛠️ Tech Stack
 - **Frontend:** Next.js, TailwindCSS
@@ -53,7 +53,7 @@ npm install
 
 Create a `.env` file and add:
 ```
-PORT=5000
+PORT=3001
 OPENAI_API_KEY=your_openai_api_key
 MONGO_URI=your_mongodb_connection_string (optional)
 ```
