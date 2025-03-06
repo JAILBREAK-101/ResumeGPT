@@ -1,7 +1,7 @@
 import { Router, Request, Response, RequestHandler } from 'express';
 // import { ParamsDictionary } from 'express-serve-static-core';
 import multer from 'multer';
-// import path from 'path';
+import path from 'path';
 import { ResumeParser } from '../services/resumeParser';
 
 interface MulterRequest extends Request {
