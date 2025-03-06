@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server';
-import type { Resume } from '@/lib/types/resume';
 import { ExportHandler } from '@/lib/exports/handlers';
 
 export async function POST(request: Request) {
