@@ -1,5 +1,10 @@
 # ResumeGPT - AI-Powered Resume Parser
 
+[![GitHub license](https://img.shields.io/github/license/GenixTech/ResumeGPT)](https://github.com/GenixTech/ResumeGPT/blob/main/LICENSE)
+[![GitHub issues](https://img.shields.io/github/issues/GenixTech/ResumeGPT)](https://github.com/GenixTech/ResumeGPT/issues)
+[![GitHub stars](https://img.shields.io/github/stars/GenixTech/ResumeGPT)](https://github.com/GenixTech/ResumeGPT/stargazers)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](https://github.com/GenixTech/ResumeGPT/blob/main/CONTRIBUTING.md)
+
 ## 📌 Overview
 **ResumeGPT** is an AI-powered resume parser that extracts key information from resumes (PDF/DOCX) and structures it into JSON format. It helps recruiters, HR professionals, and job seekers to process resumes efficiently.
 
@@ -53,7 +58,7 @@ npm install
 
 Create a `.env` file and add:
 ```
-PORT=3001
+PORT=4000
 OPENAI_API_KEY=your_openai_api_key
 MONGO_URI=your_mongodb_connection_string (optional)
 ```
